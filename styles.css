@@ -1,0 +1,196 @@
+body {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #ff4c68;
+    color: #fff;
+    font-family: 'Montserrat';
+    text-align: center;
+     overflow: hidden; /* Hide scrollbars */
+ 
+}
+
+/* Kotak Animation */
+.kotak{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+.kotak li{
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 25px;
+    height: 25px;
+    background: rgba(255,255,255,0.2);
+    animation: animate 20s linear infinite; 
+    bottom: -150px;
+    transition: all 1s ease;
+}
+.kotak li:nth-child(1){
+    left: 86%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+}
+.kotak li:nth-child(2){
+    left: 12%;
+    width: 30px;
+    height: 30px;
+    animation-delay: 1.5s;
+    animation-duration: 10s;
+}
+.kotak li:nth-child(3){
+    left: 70%;
+    width: 100px;
+    height: 100px;
+    animation-delay: 5.5s;
+}
+.kotak li:nth-child(4){
+    left: 42%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 15s; 
+}
+.kotak li:nth-child(5){
+    left: 15%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3.5s;
+}
+/* CIRCLE ANIMATION */
+.bulat {
+    position: relative;
+    width: 600px;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.bulat span:nth-child(1) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #fff;
+    border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+    transition: 0,5s;
+    animation: animate2 6s linear infinite;
+} 
+
+.bulat span:nth-child(2) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #fff;
+    border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+    transition: 0,5s;
+    animation: animate3 4s linear infinite;
+} 
+
+.bulat span:nth-child(3) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #fff;
+    border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+    transition: 0,5s;
+    animation: animate2 10s linear infinite;
+} 
+
+@keyframes animate{
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(-100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@keyframes animate2 {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes animate3 {
+    0% {
+        transform: rotate(360deg);
+    }
+
+    100% {
+        
+        transform: rotate(0deg);
+    }
+}
+
+/* Content */
+.jam {
+    font-size: 8rem;
+}
+
+.container-fluid {
+    position: relative;
+    padding: 40px 60px;
+    text-align: center;
+    transition: 0.5s;
+    z-index: 1000;
+}
+
+.ucapan {
+    font-size: 2rem;
+    margin: 10px 0 0 0;
+}
+
+#demo {
+    display:inline-block;
+
+    font-size: 1rem;
+   
+}
+
+.tombol {
+    margin-top: 30px;
+}
+
+
+/* UBAH POSISI LAYAR */
+@media only screen and (max-width: 900px), screen and (max-height: 700px) {
+
+  .jam{
+        font-size: 4rem;
+     
+    }
+    .ucapan{
+        font-size: 1.5rem;
+        
+    }
+   
+    #demo{
+        font-size: 1rem;
+    }
+
+    .bulat{
+        width: 450px;
+        height: 450px;
+    }
+}
